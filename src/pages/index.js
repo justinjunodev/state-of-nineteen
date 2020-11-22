@@ -6,7 +6,6 @@ import States from '../components/States'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>State of Nineteen</h1>
     <States />
   </Layout>
 )
