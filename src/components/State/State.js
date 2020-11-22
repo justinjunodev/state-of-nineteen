@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FaPlus, FaMinus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
 
 const State = ({
   name,
@@ -16,11 +17,21 @@ const State = ({
     </h2>
     <ul>
       <li>
+        <FaPlus />
         Positive: {positive || 'N/A'} + {positiveInc}
       </li>
-      <li>Negative: {negative || 'N/A'}</li>
-      <li>Hospitalized: {hospitalized || 'N/A'}</li>
-      <li>Critical: {critical || 'N/A'}</li>
+      <li>
+        <FaMinus />
+        Negative: {negative || 'N/A'}
+      </li>
+      <li>
+        <FaHospitalAlt />
+        Hospitalized: {hospitalized || 'N/A'}
+      </li>
+      <li>
+        <FaHeartbeat />
+        Critical: {critical || 'N/A'}
+      </li>
     </ul>
   </div>
 )
