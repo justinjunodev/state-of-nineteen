@@ -1,12 +1,12 @@
 import React from 'react'
 import stateAbbreviations from 'states-abbreviations'
-import useCovidData from '../../hooks/useCovidData'
+import useCovidStateData from '../../hooks/useCovidStateData'
 import Error from '../Error'
 import Loading from '../Loading'
 import State from '../State'
 
 const States = () => {
-  const { status, data, error } = useCovidData()
+  const { status, data: states, error } = useCovidStateData()
 
   if (status === 'error') {
     return <Error message={error.message} />
@@ -17,9 +17,9 @@ const States = () => {
   }
 
   return (
-    <>
-      <h2>Latest State Data:</h2>
-      {data.map(state => {
+    <div>
+      <h2>Current State Data:</h2>
+      {states.map(state => {
         // Filters out US Territories.
         if (!stateAbbreviations[state.state] || state.state === 'DC')
           return null
@@ -30,13 +30,12 @@ const States = () => {
             abbreviation={state.state}
             positive={state.positive}
             positiveInc={state.positiveIncrease}
-            negative={state.negative}
             hospitalized={state.hospitalizedCurrently}
             critical={state.inIcuCurrently}
           />
         )
       })}
-    </>
+    </div>
   )
 }
 

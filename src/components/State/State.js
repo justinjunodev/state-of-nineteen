@@ -1,16 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FaPlus, FaMinus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
+import { FaPlus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
 
-const State = ({
-  name,
-  abbreviation,
-  positive,
-  positiveInc,
-  negative,
-  hospitalized,
-  critical,
-}) => (
+const State = ({ name, abbreviation, positive, hospitalized, critical }) => (
   <div>
     <h3>
       {abbreviation} - {name}
@@ -18,19 +10,22 @@ const State = ({
     <ul>
       <li>
         <FaPlus />
-        Positive: {positive || 'N/A'} + {positiveInc}
-      </li>
-      <li>
-        <FaMinus />
-        Negative: {negative || 'N/A'}
+        <span>
+          Positive: {positive ? positive.toLocaleString() : 'No Data Availabe'}
+        </span>
       </li>
       <li>
         <FaHospitalAlt />
-        Hospitalized: {hospitalized || 'N/A'}
+        <span>
+          Hospitalized:{' '}
+          {hospitalized ? hospitalized.toLocaleString() : 'No Data Availabe'}
+        </span>
       </li>
       <li>
         <FaHeartbeat />
-        Critical: {critical || 'N/A'}
+        <span>
+          Critical: {critical ? critical.toLocaleString() : 'No Data Availabe'}
+        </span>
       </li>
     </ul>
   </div>
@@ -40,8 +35,6 @@ State.propTypes = {
   name: PropTypes.string.isRequired,
   abbreviation: PropTypes.string.isRequired,
   positive: PropTypes.number,
-  positiveInc: PropTypes.number,
-  negative: PropTypes.number,
   hospitalized: PropTypes.number,
   critical: PropTypes.number,
 }
