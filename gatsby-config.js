@@ -15,6 +15,23 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: `Nunito`,
+              variants: [`400`, `400i`],
+            },
+            {
+              family: `Poppins`,
+              variants: [`700`, `700i`],
+            },
+          ],
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
