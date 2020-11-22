@@ -6,3 +6,5 @@ const Error = ({ message }) => <div>Error: {message}</div>
 Error.propTypes = {
   message: PropTypes.string.isRequired,
 }
+
+export default Error
