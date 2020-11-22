@@ -18,6 +18,7 @@ const States = () => {
 
   return (
     <>
+      <h2>Latest State Data:</h2>
       {data.map(state => {
         // Filters out US Territories.
         if (!stateAbbreviations[state.state] || state.state === 'DC')

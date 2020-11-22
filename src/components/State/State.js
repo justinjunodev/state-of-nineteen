@@ -12,9 +12,9 @@ const State = ({
   critical,
 }) => (
   <div>
-    <h2>
+    <h3>
       {abbreviation} - {name}
-    </h2>
+    </h3>
     <ul>
       <li>
         <FaPlus />
