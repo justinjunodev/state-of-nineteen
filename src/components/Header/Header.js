@@ -1,7 +1,7 @@
 import React from 'react'
 import useSiteMeta from '../../hooks/useSiteMeta'
 
-const Sidebar = () => {
+const Header = () => {
   const { title, description } = useSiteMeta()
   return (
     <div>
@@ -11,4 +11,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Header

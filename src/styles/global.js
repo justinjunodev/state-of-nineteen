@@ -46,6 +46,9 @@ const GlobalStyles = createGlobalStyle`
     h4 {
         font-size: var(--md);
     }
+    small {
+        font-size: var(--xs);
+    }
 `
 
 export default GlobalStyles
