@@ -1,33 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FaPlus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
+import * as S from './styles'
 
 const State = ({ name, positive, hospitalized, critical }) => {
   const ndr = 'No Data Reported'
   return (
-    <div>
-      <h4>{name}</h4>
-      <ul>
-        <li>
+    <S.StateDetail>
+      <S.StateName>{name}</S.StateName>
+      <S.StateData>
+        <S.StateDataPoint>
           <FaPlus />
-          <span>
-            Positive Cases: {positive ? positive.toLocaleString() : ndr}
-          </span>
-        </li>
-        <li>
+          <span>Cases: {positive ? positive.toLocaleString() : ndr}</span>
+        </S.StateDataPoint>
+        <S.StateDataPoint>
           <FaHospitalAlt />
           <span>
             In Hospital: {hospitalized ? hospitalized.toLocaleString() : ndr}
           </span>
-        </li>
-        <li>
+        </S.StateDataPoint>
+        <S.StateDataPoint>
           <FaHeartbeat />
-          <span>
-            In Critical Condition: {critical ? critical.toLocaleString() : ndr}
-          </span>
-        </li>
-      </ul>
-    </div>
+          <span>In ICU: {critical ? critical.toLocaleString() : ndr}</span>
+        </S.StateDataPoint>
+      </S.StateData>
+    </S.StateDetail>
   )
 }
 

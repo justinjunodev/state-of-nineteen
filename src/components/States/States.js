@@ -1,6 +1,7 @@
 import React from 'react'
 import stateAbbreviations from 'states-abbreviations'
 import useCovidStateData from '../../hooks/useCovidStateData'
+import * as S from './styles'
 import Error from '../Error'
 import Loading from '../Loading'
 import State from '../State'
@@ -17,24 +18,26 @@ const States = () => {
   }
 
   return (
-    <div>
-      <h3>Reports by State</h3>
-      {states.map(state => {
-        // Filters out US Territories.
-        if (!stateAbbreviations[state.state] || state.state === 'DC')
-          return null
-        return (
-          <State
-            key={state.state}
-            name={stateAbbreviations[state.state]}
-            positive={state.positive}
-            positiveInc={state.positiveIncrease}
-            hospitalized={state.hospitalizedCurrently}
-            critical={state.inIcuCurrently}
-          />
-        )
-      })}
-    </div>
+    <S.StatesContent>
+      <S.StatesHeading>Reports by State</S.StatesHeading>
+      <S.StateGrid>
+        {states.map(state => {
+          // Filters out US Territories.
+          if (!stateAbbreviations[state.state] || state.state === 'DC')
+            return null
+          return (
+            <State
+              key={state.state}
+              name={stateAbbreviations[state.state]}
+              positive={state.positive}
+              positiveInc={state.positiveIncrease}
+              hospitalized={state.hospitalizedCurrently}
+              critical={state.inIcuCurrently}
+            />
+          )
+        })}
+      </S.StateGrid>
+    </S.StatesContent>
   )
 }
 
