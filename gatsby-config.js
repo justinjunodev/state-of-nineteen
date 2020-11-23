@@ -22,7 +22,7 @@ module.exports = {
           google: [
             {
               family: `Nunito`,
-              variants: [`400`, `400i`],
+              variants: [`400`, `400i`, `700`, `700i`],
             },
             {
               family: `Poppins`,
