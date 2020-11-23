@@ -1,4 +1,5 @@
 import React from 'react'
+import * as S from './styles'
 import useCovidCountryData from '../../hooks/useCovidCountryData'
 import Link from '../Link'
 import Error from '../Error'
@@ -18,9 +19,9 @@ const Country = () => {
   const { positive, hospitalizedCurrently, inIcuCurrently, death } = country[0]
 
   return (
-    <div>
-      <h2>In the United States</h2>
-      <p>
+    <S.CountryContent>
+      <S.CountryHeading>In the United States</S.CountryHeading>
+      <S.CountryText>
         There are <u>{positive.toLocaleString()}</u> active cases of Covid-19.{' '}
         <u>{hospitalizedCurrently.toLocaleString()}</u> are receiving hospital
         care with <u>{inIcuCurrently.toLocaleString()}</u> patients in critical
@@ -51,8 +52,8 @@ const Country = () => {
           The Atlantic's Covid Tracking Project
         </Link>{' '}
         and is trusted by Johns Hopkins, The Whitehouse, and many more.
-      </p>
-    </div>
+      </S.CountryText>
+    </S.CountryContent>
   )
 }
 
