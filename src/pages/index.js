@@ -7,8 +7,8 @@ import Country from '../components/Country'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <States />
     <Country />
+    <States />
   </Layout>
 )
 

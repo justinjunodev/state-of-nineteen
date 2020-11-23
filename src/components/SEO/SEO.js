@@ -27,7 +27,9 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={
+        defaultTitle ? `%s | ${defaultTitle} | Covid-19 Data for U.S.` : null
+      }
       meta={[
         {
           name: `description`,

@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FaPlus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
 
-const State = ({ name, abbreviation, positive, hospitalized, critical }) => (
+const State = ({ name, positive, hospitalized, critical }) => (
   <div>
-    <h3>
-      {abbreviation} - {name}
-    </h3>
+    <h4>{name}</h4>
     <ul>
       <li>
         <FaPlus />
@@ -33,7 +31,6 @@ const State = ({ name, abbreviation, positive, hospitalized, critical }) => (
 
 State.propTypes = {
   name: PropTypes.string.isRequired,
-  abbreviation: PropTypes.string.isRequired,
   positive: PropTypes.number,
   hospitalized: PropTypes.number,
   critical: PropTypes.number,

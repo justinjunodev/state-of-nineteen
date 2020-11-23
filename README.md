@@ -1,3 +1,3 @@
 # State of Nineteen
 
-Get the latest statistical data for Covid-19 by State. A project by Justin Juno.
+The lastest Covid-19 data for the United States by state.

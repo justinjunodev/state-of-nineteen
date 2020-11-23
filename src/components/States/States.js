@@ -18,7 +18,7 @@ const States = () => {
 
   return (
     <div>
-      <h2>Current State Data:</h2>
+      <h3>Data by State</h3>
       {states.map(state => {
         // Filters out US Territories.
         if (!stateAbbreviations[state.state] || state.state === 'DC')
@@ -27,7 +27,6 @@ const States = () => {
           <State
             key={state.state}
             name={stateAbbreviations[state.state]}
-            abbreviation={state.state}
             positive={state.positive}
             positiveInc={state.positiveIncrease}
             hospitalized={state.hospitalizedCurrently}
