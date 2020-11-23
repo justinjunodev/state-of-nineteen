@@ -16,16 +16,17 @@ const Country = () => {
   }
 
   const { positive, hospitalizedCurrently, inIcuCurrently, death } = country[0]
+
   return (
     <div>
       <h2>In the United States</h2>
       <p>
-        There are {positive.toLocaleString()} active cases of Covid-19, and{' '}
-        {hospitalizedCurrently.toLocaleString()} are receiving hospital care,
-        with {inIcuCurrently.toLocaleString()} in the ICU. The coronavirus is
-        now responsible for the death of {death.toLocaleString()} Americans. To
-        help reduce the spread and end this pandemic, please follow the advice
-        of the{' '}
+        There are <u>{positive.toLocaleString()}</u> active cases of Covid-19.{' '}
+        <u>{hospitalizedCurrently.toLocaleString()}</u> are receiving hospital
+        care with <u>{inIcuCurrently.toLocaleString()}</u> patients in critical
+        condition. The coronavirus is now responsible for the death of{' '}
+        <u>{death.toLocaleString()}</u> Americans. To help reduce the spread and
+        end this pandemic, please follow the advice of the{' '}
         <Link
           isExternal
           to="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"

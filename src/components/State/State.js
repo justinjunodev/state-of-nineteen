@@ -2,32 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FaPlus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
 
-const State = ({ name, positive, hospitalized, critical }) => (
-  <div>
-    <h4>{name}</h4>
-    <ul>
-      <li>
-        <FaPlus />
-        <span>
-          Positive: {positive ? positive.toLocaleString() : 'No Data Availabe'}
-        </span>
-      </li>
-      <li>
-        <FaHospitalAlt />
-        <span>
-          Hospitalized:{' '}
-          {hospitalized ? hospitalized.toLocaleString() : 'No Data Availabe'}
-        </span>
-      </li>
-      <li>
-        <FaHeartbeat />
-        <span>
-          Critical: {critical ? critical.toLocaleString() : 'No Data Availabe'}
-        </span>
-      </li>
-    </ul>
-  </div>
-)
+const State = ({ name, positive, hospitalized, critical }) => {
+  const ndr = 'No Data Reported'
+  return (
+    <div>
+      <h4>{name}</h4>
+      <ul>
+        <li>
+          <FaPlus />
+          <span>
+            Positive Cases: {positive ? positive.toLocaleString() : ndr}
+          </span>
+        </li>
+        <li>
+          <FaHospitalAlt />
+          <span>
+            In Hospital: {hospitalized ? hospitalized.toLocaleString() : ndr}
+          </span>
+        </li>
+        <li>
+          <FaHeartbeat />
+          <span>
+            In Critical Condition: {critical ? critical.toLocaleString() : ndr}
+          </span>
+        </li>
+      </ul>
+    </div>
+  )
+}
 
 State.propTypes = {
   name: PropTypes.string.isRequired,
