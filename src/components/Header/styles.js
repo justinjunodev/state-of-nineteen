@@ -1,8 +1,15 @@
 import styled from 'styled-components'
+import { contentWrapper } from '../../styles/global'
 
-export const HeaderContent = styled.header`
+export const HeaderBackground = styled.header`
+  background: black;
+  color: white;
+  padding: var(--scale-8) 0;
+`
+
+export const HeaderContent = styled.div`
+  ${contentWrapper};
   text-align: center;
-  margin-bottom: var(--scale-8);
 `
 
 export const HeaderTitle = styled.h1`

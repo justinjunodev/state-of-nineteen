@@ -1,5 +1,11 @@
 import 'reset-css'
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
+
+export const contentWrapper = css`
+  max-width: 864px;
+  width: calc(100% - var(--scale-6));
+  margin: 0 auto;
+`
 
 const GlobalStyles = createGlobalStyle`
     :root {
@@ -26,6 +32,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: var(--scale-3);
         font-weight: 400;
         line-height: var(--scale-4);
+        background: white;
     }
     h1, h2, h3, h4 {
         font-family: var(--poppins);
