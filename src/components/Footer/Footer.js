@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from '../Link'
+import * as S from './styles'
 
 const Footer = () => (
-  <footer>
-    <p>
+  <S.FooterContent>
+    <S.FooterBuild>
       Built with{' '}
       <Link
         isExternal
@@ -28,8 +29,8 @@ const Footer = () => (
       >
         Fathom
       </Link>
-    </p>
-    <p>
+    </S.FooterBuild>
+    <S.FooterCredit>
       An open-source project by{' '}
       <Link
         isExternal
@@ -38,9 +39,11 @@ const Footer = () => (
       >
         @JustinJunoDev
       </Link>
-    </p>
-    <small>All Rights Reserved &copy; {new Date().getFullYear()}</small>
-  </footer>
+    </S.FooterCredit>
+    <S.FooterCopyright>
+      All Rights Reserved &copy; {new Date().getFullYear()}
+    </S.FooterCopyright>
+  </S.FooterContent>
 )
 
 export default Footer
