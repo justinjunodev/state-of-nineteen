@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StateDetail = styled.div`
   border: 1px solid black;
-  padding: var(--scale-5);
+  padding: var(--scale-6);
 `
 
 export const StateName = styled.h4`
@@ -15,9 +15,9 @@ export const StateDataPoint = styled.li`
   display: flex;
   align-items: center;
   span {
-    margin-left: var(--scale-2);
+    margin-left: var(--scale-3);
   }
   :not(:last-of-type) {
-    margin-bottom: var(--scale-3);
+    margin-bottom: var(--scale-1);
   }
 `
