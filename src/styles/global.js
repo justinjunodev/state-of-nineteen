@@ -31,13 +31,12 @@ const GlobalStyles = createGlobalStyle`
         font-family: var(--nunito);
         font-size: var(--scale-3);
         font-weight: 400;
-        line-height: var(--scale-4);
+        line-height: var(--scale-5);
         background: white;
     }
     h1, h2, h3, h4 {
         font-family: var(--poppins);
         font-weight: 700;
-        line-height: var(--scale-5);
         text-transform: uppercase;
     }
     h1 {
