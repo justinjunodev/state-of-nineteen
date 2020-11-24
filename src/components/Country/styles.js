@@ -24,7 +24,7 @@ export const CountryContent = styled.div`
 `
 
 export const CountryHeading = styled.h2`
-  margin-bottom: var(--scale-6);
+  margin-bottom: var(--scale-5);
 `
 
 export const CountryText = styled.p`
