@@ -1,18 +1,24 @@
 import styled from 'styled-components'
-import { contentWrapper } from '../../styles/global'
+import { wrapper, queries } from '../../styles/global'
 
 export const StatesContent = styled.main`
-  ${contentWrapper};
-  margin-bottom: var(--scale-8);
+  ${wrapper};
+  margin-bottom: var(--scale-6);
 `
 
 export const StatesHeading = styled.h3`
-  margin-bottom: var(--scale-6);
+  margin-bottom: var(--scale-5);
+  ${queries[1]} {
+    margin-bottom: var(--scale-6);
+  }
 `
 
 export const StateGrid = styled.div`
   display: grid;
-  grid-gap: var(--scale-6);
-
-  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+  grid-gap: var(--scale-5);
+  grid-template-columns: 1fr;
+  ${queries[1]} {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--scale-6);
+  }
 `

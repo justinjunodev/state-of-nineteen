@@ -1,13 +1,16 @@
 import 'reset-css'
 import { createGlobalStyle, css } from 'styled-components'
 
-export const contentWrapper = css`
+export const wrapper = css`
   max-width: 864px;
   width: calc(100% - var(--scale-6));
   margin: 0 auto;
 `
 
-const GlobalStyles = createGlobalStyle`
+const breakpoints = [480, 640, 768]
+export const queries = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+
+export const GlobalStyles = createGlobalStyle`
     :root {
         --nunito: 'Nunito', sans-serif; 
         --poppins: 'Poppins', sans-serif;
@@ -25,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
     }
     html {
         text-size-adjust: 100%;
-        font-size: 18px;
+        font-size: 16px;
     }
     body {
         font-family: var(--nunito);
@@ -45,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
     }
     h2 {
         font-size: var(--scale-6);
-        line-height: var(--scale-6);
+        line-height: var(--scale-7);
     }
     h3 {
         font-size: var(--scale-5);
@@ -56,6 +59,9 @@ const GlobalStyles = createGlobalStyle`
     small {
         font-size: var(--scale-2);
     }
+    ${queries[2]} {
+        html {
+            font-size: 18px;
+        }
+    }
 `
-
-export default GlobalStyles

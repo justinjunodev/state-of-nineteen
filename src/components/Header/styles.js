@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { contentWrapper } from '../../styles/global'
+import { wrapper } from '../../styles/global'
 
 export const HeaderBackground = styled.header`
   background: black;
@@ -8,7 +8,7 @@ export const HeaderBackground = styled.header`
 `
 
 export const HeaderContent = styled.div`
-  ${contentWrapper};
+  ${wrapper};
   text-align: center;
 `
 

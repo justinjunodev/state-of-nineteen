@@ -1,8 +1,12 @@
 import styled from 'styled-components'
+import { queries } from '../../styles/global'
 
 export const StateDetail = styled.div`
   border: 1px solid black;
-  padding: var(--scale-6);
+  padding: var(--scale-5);
+  ${queries[2]} {
+    padding: var(--scale-6);
+  }
 `
 
 export const StateName = styled.h4`

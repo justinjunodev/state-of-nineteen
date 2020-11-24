@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { contentWrapper } from '../../styles/global'
+import { wrapper } from '../../styles/global'
 
 export const FooterContent = styled.footer`
-  ${contentWrapper};
+  ${wrapper};
   text-align: center;
   padding-bottom: var(--scale-6);
 `
