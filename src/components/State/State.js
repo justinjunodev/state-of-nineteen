@@ -10,18 +10,23 @@ const State = ({ name, positive, hospitalized, critical }) => {
       <S.StateName>{name}</S.StateName>
       <S.StateData>
         <S.StateDataPoint>
-          <FaPlus />
-          <span>Cases: {positive ? positive.toLocaleString() : ndr}</span>
-        </S.StateDataPoint>
-        <S.StateDataPoint>
-          <FaHospitalAlt />
           <span>
-            In Hospital: {hospitalized ? hospitalized.toLocaleString() : ndr}
+            <FaPlus />
           </span>
+          Cases: <strong>{positive ? positive.toLocaleString() : ndr}</strong>
         </S.StateDataPoint>
         <S.StateDataPoint>
-          <FaHeartbeat />
-          <span>In ICU: {critical ? critical.toLocaleString() : ndr}</span>
+          <span>
+            <FaHospitalAlt />
+          </span>
+          In Hospital:
+          <strong>{hospitalized ? hospitalized.toLocaleString() : ndr}</strong>
+        </S.StateDataPoint>
+        <S.StateDataPoint>
+          <span>
+            <FaHeartbeat />
+          </span>
+          In ICU: <strong>{critical ? critical.toLocaleString() : ndr}</strong>
         </S.StateDataPoint>
       </S.StateData>
     </S.StateDetail>

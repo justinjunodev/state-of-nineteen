@@ -64,6 +64,9 @@ export const GlobalStyles = createGlobalStyle`
     h4 {
         font-size: var(--scale-4);
     }
+    strong, b {
+        font-weight: 700;
+    }
     small {
         font-size: var(--scale-2);
     }
