@@ -29,6 +29,7 @@ const Footer = () => (
       >
         Fathom
       </Link>
+      .
     </S.FooterBuild>
     <S.FooterCredit>
       An open-source project by{' '}
