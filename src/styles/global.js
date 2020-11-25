@@ -28,6 +28,8 @@ export const GlobalStyles = createGlobalStyle`
         --royal: #1A1950;
         --silver: #E6E6EB;
         --white: #F9F9FB;
+        --shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 5px 9px rgba(0, 0, 0, 0.06),
+    0 10px 22px rgba(0, 0, 0, 0.07), 0 35px 74px rgba(0, 0, 0, 0.1);
     }
     * {
         box-sizing: border-box;
@@ -41,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: var(--scale-3);
         font-weight: 400;
         line-height: var(--scale-5);
-        background: white;
+        background: var(--navy);
     }
     h1, h2, h3, h4 {
         font-family: var(--poppins);
