@@ -22,6 +22,12 @@ export const GlobalStyles = createGlobalStyle`
         --scale-3: 1rem;
         --scale-2: .707rem;
         --scale-1: 0.5rem; 
+        --red: #E73B3B;
+        --gold: #EBB55F;
+        --navy: #120F37;
+        --royal: #1A1950;
+        --silver: #E6E6EB;
+        --white: #F9F9FB;
     }
     * {
         box-sizing: border-box;
