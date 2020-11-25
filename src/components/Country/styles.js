@@ -36,6 +36,9 @@ export const CountryHeading = styled.h2`
 export const CountryText = styled.p`
   line-height: var(--scale-5);
   color: var(--silver);
+  strong {
+    color: var(--white);
+  }
   a {
     color: var(--gold);
   }

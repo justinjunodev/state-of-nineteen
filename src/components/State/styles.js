@@ -26,10 +26,11 @@ export const StateDataPoint = styled.li`
   display: flex;
   align-items: center;
   span {
-    margin-right: var(--scale-3);
+    margin-right: var(--scale-2);
     background: var(--gold);
     padding: var(--scale-1);
     border-radius: 50%;
+    box-shadow: var(--shadow);
     svg {
       color: var(--royal);
       display: block;

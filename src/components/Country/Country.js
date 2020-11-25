@@ -23,12 +23,13 @@ const Country = () => {
       <S.CountryContent>
         <S.CountryHeading>In the United States</S.CountryHeading>
         <S.CountryText>
-          There are <u>{positive.toLocaleString()}</u> active cases of Covid-19.{' '}
-          <u>{hospitalizedCurrently.toLocaleString()}</u> are receiving hospital
-          care with <u>{inIcuCurrently.toLocaleString()}</u> patients in
+          There are <strong>{positive.toLocaleString()}</strong> active cases of
+          Covid-19. <strong>{hospitalizedCurrently.toLocaleString()}</strong>{' '}
+          are receiving hospital care with{' '}
+          <strong>{inIcuCurrently.toLocaleString()}</strong> patients in
           critical condition. The coronavirus is now responsible for the death
-          of <u>{death.toLocaleString()}</u> Americans. To help reduce the
-          spread and end this pandemic, please follow the advice of the{' '}
+          of <strong>{death.toLocaleString()}</strong> Americans. To help reduce
+          the spread and end this pandemic, please follow the advice of the{' '}
           <Link
             isExternal
             to="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"

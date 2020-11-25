@@ -28,8 +28,7 @@ export const GlobalStyles = createGlobalStyle`
         --royal: #1A1950;
         --silver: #E6E6EB;
         --white: #F9F9FB;
-        --shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 5px 9px rgba(0, 0, 0, 0.06),
-    0 10px 22px rgba(0, 0, 0, 0.07), 0 35px 74px rgba(0, 0, 0, 0.1);
+        --shadow: 0 .707rem 1rem .5rem rgba(0,0,0,0.1);
     }
     * {
         box-sizing: border-box;
