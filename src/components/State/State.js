@@ -1,12 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FaPlus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
+import { TwitterShareButton } from 'react-share'
+import { FaPlus, FaHospitalAlt, FaHeartbeat, FaTwitter } from 'react-icons/fa'
+import useSiteMeta from '../../hooks/useSiteMeta'
 import * as S from './styles'
 
 const State = ({ name, positive, hospitalized, critical }) => {
   const ndr = 'No Data Reported'
+  const { title, url } = useSiteMeta()
   return (
     <S.StateDetail>
+      <S.StateShare>
+        <TwitterShareButton
+          title={`Did you know that ${name} has ${positive.toLocaleString()} active cases of Covid-19? Learn more at "${title}".`}
+          url={url}
+        >
+          <span>Share on Twitter</span>
+        </TwitterShareButton>
+      </S.StateShare>
       <S.StateName>{name}</S.StateName>
       <S.StateData>
         <S.StateDataPoint>

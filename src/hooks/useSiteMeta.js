@@ -7,6 +7,7 @@ const useSiteMeta = () => {
         siteMetadata {
           title
           description
+          url
         }
       }
     }

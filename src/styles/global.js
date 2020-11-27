@@ -66,6 +66,9 @@ export const GlobalStyles = createGlobalStyle`
     strong, b {
         font-weight: 700;
     }
+    em, i {
+        font-style: italic;
+    }
     small {
         font-size: var(--scale-2);
     }

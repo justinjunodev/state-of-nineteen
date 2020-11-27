@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { queries } from '../../styles/global'
 
 export const StateDetail = styled.div`
+  position: relative;
   padding: var(--scale-5);
   background: var(--royal);
   box-shadow: var(--shadow);
@@ -10,6 +11,23 @@ export const StateDetail = styled.div`
   border-bottom-left-radius: var(--scale-2);
   ${queries[2]} {
     padding: var(--scale-6);
+  }
+`
+
+export const StateShare = styled.span`
+  position: absolute;
+  top: var(--scale-1);
+  right: var(--scale-3);
+  span {
+    display: flex;
+    align-items: center;
+    font-size: var(--scale-2);
+    font-style: italic;
+    color: var(--gold);
+    svg {
+      font-size: var(--scale-3);
+      margin-left: 5px;
+    }
   }
 `
 
