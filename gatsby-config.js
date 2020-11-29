@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `State of Nineteen`,
-    description: `The lastest Covid-19 data for the United States by state.`,
+    description: `The latest Covid-19 data for the United States by state.`,
     url: `https://www.stateofnineteen.com`,
     author: `@justinjunodev`,
   },
