@@ -2,7 +2,6 @@ import React from 'react'
 import stateAbbreviations from 'states-abbreviations'
 import useCovidStateData from '../../hooks/useCovidStateData'
 import * as S from './styles'
-import * as M from './motion'
 import Error from '../Error'
 import Loading from '../Loading'
 import State from '../State'
@@ -21,11 +20,9 @@ const States = () => {
   }
 
   return (
-    <S.StatesContent variants={M.StatesContent} initial="hidden" animate="show">
-      <S.StatesHeading variants={M.StatesItem}>
-        Reports by State
-      </S.StatesHeading>
-      <S.StateGrid variants={M.StatesItem}>
+    <S.StatesContent>
+      <S.StatesHeading>Reports by State</S.StatesHeading>
+      <S.StateGrid>
         {states.map(state => {
           // Filters out US Territories.
           if (!stateAbbreviations[state.state] || state.state === 'DC')

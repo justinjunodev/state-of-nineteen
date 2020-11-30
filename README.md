@@ -4,7 +4,7 @@ Get the latest Covid-19 data for the United States by state.
 
 **Short Technical Overview:**
 
-State of Nineteen is bootstrapped with [Gatsby](https://www.gatsbyjs.com/). It uses [React Query](https://react-query.tanstack.com/) and [Axios](https://github.com/axios/axios) for managing/ fetching data, [Styled Components](https://styled-components.com) for styling, [Framer Motion](https://www.framer.com/motion/) for page animations, and [ESLint](https://eslint.org/) for keeping code tidy. It is hosted on [Netlify](https://www.netlify.com/) and automatically deploys on master updates.
+State of Nineteen is bootstrapped with [Gatsby](https://www.gatsbyjs.com/). It uses [React Query](https://react-query.tanstack.com/) and [Axios](https://github.com/axios/axios) for managing/ fetching data, [Styled Components](https://styled-components.com) for styling, and [ESLint](https://eslint.org/) for keeping code tidy. It is hosted on [Netlify](https://www.netlify.com/) and automatically deploys on master updates.
 
 [![GitHub issues](https://img.shields.io/github/issues/justinjunodev/state-of-nineteen)](https://github.com/justinjunodev/state-of-nineteen/issues) ![Twitter Follow](https://img.shields.io/twitter/follow/justinjunodev?label=follow)
 

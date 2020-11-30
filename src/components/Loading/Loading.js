@@ -1,5 +1,5 @@
 import React from 'react'
-import { BounceLoader } from 'react-spinners'
+import { BarLoader } from 'react-spinners'
 import * as S from './styles'
 
 /*
@@ -8,7 +8,7 @@ import * as S from './styles'
  */
 const Loading = () => (
   <S.LoadingWrapper>
-    <BounceLoader size="36px" color="#1A1950" />
+    <BarLoader height="6px" width="180px" color="#EBB55F" />
   </S.LoadingWrapper>
 )
 

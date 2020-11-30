@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { wrapper, queries } from '../../styles/global'
 
 export const CountryBackground = styled.header`
@@ -15,7 +14,7 @@ export const CountryBackground = styled.header`
   );
 `
 
-export const StripesLeft = styled(motion.div)`
+export const StripesLeft = styled.div`
   display: none;
   ${queries[2]} {
     display: block;
@@ -31,7 +30,7 @@ export const StripesLeft = styled(motion.div)`
   }
 `
 
-export const StripesRight = styled(motion.div)`
+export const StripesRight = styled.div`
   display: none;
   ${queries[2]} {
     display: block;
@@ -47,7 +46,7 @@ export const StripesRight = styled(motion.div)`
   }
 `
 
-export const CountryContent = styled(motion.div)`
+export const CountryContent = styled.div`
   ${wrapper};
   z-index: 1;
   text-align: center;
@@ -63,12 +62,12 @@ export const CountryContent = styled(motion.div)`
   }
 `
 
-export const CountryHeading = styled(motion.h2)`
+export const CountryHeading = styled.h2`
   margin-bottom: var(--scale-5);
   color: var(--white);
 `
 
-export const CountryText = styled(motion.p)`
+export const CountryText = styled.p`
   line-height: var(--scale-5);
   color: var(--silver);
   strong {

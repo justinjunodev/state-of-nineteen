@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { wrapper, queries } from '../../styles/global'
 
-export const FooterStripes = styled(motion.div)`
+export const FooterStripes = styled.div`
   display: none;
   ${queries[2]} {
     display: block;
@@ -13,7 +12,7 @@ export const FooterStripes = styled(motion.div)`
   }
 `
 
-export const FooterContent = styled(motion.footer)`
+export const FooterContent = styled.footer`
   ${wrapper};
   text-align: center;
   padding-bottom: var(--scale-6);

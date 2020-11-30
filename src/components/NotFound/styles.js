@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { wrapper, queries } from '../../styles/global'
 
 export const NotFoundBackground = styled.header`
@@ -14,7 +13,7 @@ export const NotFoundBackground = styled.header`
   );
 `
 
-export const NotFoundContent = styled(motion.div)`
+export const NotFoundContent = styled.div`
   ${wrapper};
   text-align: center;
   margin-bottom: var(--scale-8);
@@ -29,12 +28,12 @@ export const NotFoundContent = styled(motion.div)`
   }
 `
 
-export const NotFoundHeading = styled(motion.h2)`
+export const NotFoundHeading = styled.h2`
   margin-bottom: var(--scale-5);
   color: var(--white);
 `
 
-export const NotFoundText = styled(motion.p)`
+export const NotFoundText = styled.p`
   line-height: var(--scale-5);
   color: var(--silver);
   strong {
