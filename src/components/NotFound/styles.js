@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { wrapper, queries } from '../../styles/global'
 
-export const CountryBackground = styled.header`
+export const NotFoundBackground = styled.header`
   background: linear-gradient(
     to bottom,
     var(--white) var(--scale-8),
@@ -14,7 +14,7 @@ export const CountryBackground = styled.header`
   );
 `
 
-export const CountryContent = styled(motion.div)`
+export const NotFoundContent = styled(motion.div)`
   ${wrapper};
   text-align: center;
   margin-bottom: var(--scale-8);
@@ -29,12 +29,12 @@ export const CountryContent = styled(motion.div)`
   }
 `
 
-export const CountryHeading = styled(motion.h2)`
+export const NotFoundHeading = styled(motion.h2)`
   margin-bottom: var(--scale-5);
   color: var(--white);
 `
 
-export const CountryText = styled(motion.p)`
+export const NotFoundText = styled(motion.p)`
   line-height: var(--scale-5);
   color: var(--silver);
   strong {

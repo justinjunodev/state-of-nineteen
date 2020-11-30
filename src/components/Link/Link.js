@@ -5,10 +5,12 @@ import { Link as GatsbyLink } from 'gatsby'
 const Link = ({ to, children, label, isExternal }) =>
   isExternal ? (
     <a href={to} target="_blank" rel="noreferrer" aria-label={label}>
-      {children}
+      <span>{children}</span>
     </a>
   ) : (
-    <GatsbyLink to={to}>{children}</GatsbyLink>
+    <GatsbyLink to={to}>
+      <span>{children}</span>
+    </GatsbyLink>
   )
 
 Link.propTypes = {

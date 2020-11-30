@@ -24,9 +24,10 @@ export const StateShare = styled.span`
     font-size: var(--scale-2);
     font-style: italic;
     color: var(--gold);
-    svg {
-      font-size: var(--scale-3);
-      margin-left: 5px;
+    text-shadow: 1px 1px 2px var(--navy);
+    transition: color 0.25s ease-in-out;
+    :hover {
+      color: var(--white);
     }
   }
 `
