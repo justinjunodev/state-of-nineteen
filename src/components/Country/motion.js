@@ -21,3 +21,14 @@ export const CountryItem = {
     opacity: 1,
   },
 }
+
+export const CountryStripes = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delay: 2,
+      duration: 0.5,
+    },
+  },
+}

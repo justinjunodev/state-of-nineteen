@@ -21,6 +21,16 @@ const Country = () => {
 
   return (
     <S.CountryBackground>
+      <S.StripesLeft
+        variants={M.CountryStripes}
+        initial="hidden"
+        animate="show"
+      />
+      <S.StripesRight
+        variants={M.CountryStripes}
+        initial="hidden"
+        animate="show"
+      />
       <S.CountryContent
         variants={M.CountryContent}
         initial="hidden"

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { wrapper, queries } from '../../styles/global'
 
 export const CountryBackground = styled.header`
+  position: relative;
   background: linear-gradient(
     to bottom,
     var(--white) var(--scale-8),
@@ -14,8 +15,41 @@ export const CountryBackground = styled.header`
   );
 `
 
+export const StripesLeft = styled(motion.div)`
+  display: none;
+  ${queries[2]} {
+    display: block;
+    position: absolute;
+    top: calc(var(--scale-8) + var(--scale-1));
+    left: 0;
+    z-index: -1;
+    height: calc(100% - var(--scale-8));
+    width: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% -10%, 0% 100%);
+    background-color: var(--navy);
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%231a1950' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+`
+
+export const StripesRight = styled(motion.div)`
+  display: none;
+  ${queries[2]} {
+    display: block;
+    position: absolute;
+    top: calc(var(--scale-8) + var(--scale-1));
+    right: 0;
+    z-index: -1;
+    height: calc(100% - var(--scale-8));
+    width: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 -10%);
+    background-color: var(--navy);
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%231a1950' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+`
+
 export const CountryContent = styled(motion.div)`
   ${wrapper};
+  z-index: 1;
   text-align: center;
   margin-bottom: var(--scale-8);
   padding: var(--scale-5);

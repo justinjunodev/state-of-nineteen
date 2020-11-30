@@ -11,3 +11,14 @@ export const FooterContent = {
     },
   },
 }
+
+export const FooterStripes = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delay: 2,
+      duration: 0.5,
+    },
+  },
+}
