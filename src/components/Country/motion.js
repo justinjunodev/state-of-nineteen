@@ -6,8 +6,8 @@ export const CountryContent = {
     transition: {
       type: 'spring',
       stiffness: 40,
-      delay: 1,
-      delayChildren: 1.5,
+      delay: 0.5,
+      delayChildren: 0.5,
       staggerChildren: 0.25,
     },
   },
@@ -27,7 +27,7 @@ export const CountryStripes = {
   show: {
     opacity: 1,
     transition: {
-      delay: 2,
+      delay: 1.5,
       duration: 0.5,
     },
   },

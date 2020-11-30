@@ -6,8 +6,8 @@ export const NotFoundContent = {
     transition: {
       type: 'spring',
       stiffness: 40,
-      delay: 1,
-      delayChildren: 1.5,
+      delay: 0.5,
+      delayChildren: 0.5,
       staggerChildren: 0.25,
     },
   },
