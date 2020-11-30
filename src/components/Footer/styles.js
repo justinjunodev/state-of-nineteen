@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { wrapper } from '../../styles/global'
 
-export const FooterContent = styled.footer`
+export const FooterContent = styled(motion.footer)`
   ${wrapper};
   text-align: center;
   padding-bottom: var(--scale-6);

@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from '../Link'
 import * as S from './styles'
+import * as M from './motion'
 
 const Footer = () => (
-  <S.FooterContent>
+  <S.FooterContent variants={M.FooterContent} initial="hidden" animate="show">
     <S.FooterBuild>
       Built with{' '}
       <Link

@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from './styles'
+import * as M from './motion'
 import useCovidCountryData from '../../hooks/useCovidCountryData'
 import Link from '../Link'
 import Error from '../Error'
@@ -20,9 +21,15 @@ const Country = () => {
 
   return (
     <S.CountryBackground>
-      <S.CountryContent>
-        <S.CountryHeading>In the United States</S.CountryHeading>
-        <S.CountryText>
+      <S.CountryContent
+        variants={M.CountryContent}
+        initial="hidden"
+        animate="show"
+      >
+        <S.CountryHeading variants={M.CountryItem}>
+          In the United States
+        </S.CountryHeading>
+        <S.CountryText variants={M.CountryItem}>
           There are <strong>{positive.toLocaleString()}</strong> active cases of
           Covid-19. <strong>{hospitalizedCurrently.toLocaleString()}</strong>{' '}
           are receiving hospital care with{' '}

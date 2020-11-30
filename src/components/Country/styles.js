@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { wrapper, queries } from '../../styles/global'
 
 export const CountryBackground = styled.header`
@@ -13,7 +14,7 @@ export const CountryBackground = styled.header`
   );
 `
 
-export const CountryContent = styled.div`
+export const CountryContent = styled(motion.div)`
   ${wrapper};
   text-align: center;
   margin-bottom: var(--scale-8);
@@ -28,12 +29,12 @@ export const CountryContent = styled.div`
   }
 `
 
-export const CountryHeading = styled.h2`
+export const CountryHeading = styled(motion.h2)`
   margin-bottom: var(--scale-5);
   color: var(--white);
 `
 
-export const CountryText = styled.p`
+export const CountryText = styled(motion.p)`
   line-height: var(--scale-5);
   color: var(--silver);
   strong {
