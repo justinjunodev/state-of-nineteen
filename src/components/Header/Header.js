@@ -12,6 +12,7 @@ const Header = () => {
         initial="hidden"
         animate="show"
       >
+        {/* Axe reports contrast issue due to animations fade-in. Ignore. */}
         <S.HeaderTitle variants={M.HeaderItem}>{title}</S.HeaderTitle>
         <S.HeaderSubtitle variants={M.HeaderItem}>
           {description}

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { wrapper, queries } from '../../styles/global'
 
-export const StatesContent = styled(motion.main)`
+export const StatesContent = styled(motion.div)`
   ${wrapper};
   margin-bottom: var(--scale-6);
 `

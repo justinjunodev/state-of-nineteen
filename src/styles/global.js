@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
         --navy: #120F37;
         --royal: #1A1950;
         --silver: #E6E6EB;
-        --white: #F9F9FB;
+        --white: #FCFCFF;
         --shadow: 0 .707rem 1rem .5rem rgba(0,0,0,0.1);
     }
     * {

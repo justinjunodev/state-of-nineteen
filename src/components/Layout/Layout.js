@@ -20,9 +20,9 @@ const Layout = ({ children }) => (
     </Helmet>
     <ReactQueryCacheProvider queryCache={queryCache}>
       <GlobalStyles />
-      <Header />
-      {children}
-      <Footer />
+      <Header role="banner" />
+      <main role="main">{children}</main>
+      <Footer role="contentinfo" />
     </ReactQueryCacheProvider>
   </>
 )

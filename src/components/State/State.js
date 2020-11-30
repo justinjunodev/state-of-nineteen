@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { TwitterShareButton } from 'react-share'
-import { FaPlus, FaHospitalAlt, FaHeartbeat, FaTwitter } from 'react-icons/fa'
+import { FaPlus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
 import useSiteMeta from '../../hooks/useSiteMeta'
 import * as S from './styles'
 
@@ -14,6 +14,8 @@ const State = ({ name, positive, hospitalized, critical }) => {
         <TwitterShareButton
           title={`Did you know that ${name} has ${positive.toLocaleString()} active cases of Covid-19? Learn more at "${title}".`}
           url={url}
+          aria-labelledby="share"
+          aria-describedby="Share state statistics on Twitter"
         >
           <span>Share on Twitter</span>
         </TwitterShareButton>
@@ -21,20 +23,20 @@ const State = ({ name, positive, hospitalized, critical }) => {
       <S.StateName>{name}</S.StateName>
       <S.StateData>
         <S.StateDataPoint>
-          <span>
+          <span aria-label="Active Cases">
             <FaPlus />
           </span>
           Cases: <strong>{positive ? positive.toLocaleString() : ndr}</strong>
         </S.StateDataPoint>
         <S.StateDataPoint>
-          <span>
+          <span aria-label="Hospitalized Cases">
             <FaHospitalAlt />
           </span>
           In Hospital:
           <strong>{hospitalized ? hospitalized.toLocaleString() : ndr}</strong>
         </S.StateDataPoint>
         <S.StateDataPoint>
-          <span>
+          <span aria-label="ICU Cases">
             <FaHeartbeat />
           </span>
           In ICU: <strong>{critical ? critical.toLocaleString() : ndr}</strong>
