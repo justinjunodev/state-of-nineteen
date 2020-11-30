@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+// A component for SEO, provided by Gatsby. Modified to include social images.
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`

@@ -6,9 +6,11 @@ import Link from '../Link'
 import Error from '../Error'
 import Loading from '../Loading'
 
+// A component for fetching and displaying current country (US) data.
 const Country = () => {
   const { status, data: country, error } = useCovidCountryData()
 
+  // Error and Loading status is generated from hook/React Query.
   if (status === 'error') {
     return <Error message={error.message} />
   }
@@ -17,6 +19,7 @@ const Country = () => {
     return <Loading />
   }
 
+  // A little destructuring to improve readability.
   const { positive, hospitalizedCurrently, inIcuCurrently, death } = country[0]
 
   return (

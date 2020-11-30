@@ -3,6 +3,7 @@ import * as S from './styles'
 import * as M from './motion'
 import Link from '../Link'
 
+// A component for handling 404 errors.
 const NotFound = () => (
   <S.NotFoundBackground>
     <S.NotFoundContent

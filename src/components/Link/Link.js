@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
 
+// A link component for streamlining external and internal links.
 const Link = ({ to, children, label, isExternal }) =>
   isExternal ? (
     <a href={to} target="_blank" rel="noreferrer" aria-label={label}>

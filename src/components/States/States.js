@@ -7,9 +7,11 @@ import Error from '../Error'
 import Loading from '../Loading'
 import State from '../State'
 
+// A component for fetching and displaying current state data.
 const States = () => {
   const { status, data: states, error } = useCovidStateData()
 
+  // Error and Loading status is generated from hook/React Query.
   if (status === 'error') {
     return <Error message={error.message} />
   }

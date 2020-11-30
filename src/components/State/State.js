@@ -5,6 +5,7 @@ import { FaPlus, FaHospitalAlt, FaHeartbeat } from 'react-icons/fa'
 import useSiteMeta from '../../hooks/useSiteMeta'
 import * as S from './styles'
 
+// A component for displaying and sharing current state values.
 const State = ({ name, positive, hospitalized, critical }) => {
   const ndr = 'No Data Reported'
   const { title, url } = useSiteMeta()

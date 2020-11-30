@@ -3,6 +3,7 @@ import Link from '../Link'
 import * as S from './styles'
 import * as M from './motion'
 
+// Component displays footer with attribute links and copyright info.
 const Footer = () => (
   <>
     <S.FooterContent variants={M.FooterContent} initial="hidden" animate="show">

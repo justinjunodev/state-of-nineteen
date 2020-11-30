@@ -1,15 +1,18 @@
 import 'reset-css'
 import { createGlobalStyle, css } from 'styled-components'
 
+// A wrapper for content to reduce styling redundancy and provide single source of truth.
 export const wrapper = css`
   max-width: 864px;
   width: calc(100% - var(--scale-6));
   margin: 0 auto;
 `
 
+// Breakpoints/queries to reduce styling redundancy and provide single source of truth.
 const breakpoints = [480, 640, 768]
 export const queries = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
 
+// A few base aka global styles used throughout the appliacation.
 export const GlobalStyles = createGlobalStyle`
     :root {
         --nunito: 'Nunito', sans-serif; 

@@ -3,6 +3,7 @@ import useSiteMeta from '../../hooks/useSiteMeta'
 import * as S from './styles'
 import * as M from './motion'
 
+// Component displays a header with site information.
 const Header = () => {
   const { title, description } = useSiteMeta()
   return (

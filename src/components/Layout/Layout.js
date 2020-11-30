@@ -6,8 +6,10 @@ import { GlobalStyles } from '../../styles/global'
 import Header from '../Header'
 import Footer from '../Footer'
 
+// Provides support for state, caching, and lifecycle methods on app data.
 const queryCache = new QueryCache()
 
+// A component for wrapping page content with multiple theme/provider contexts.
 const Layout = ({ children }) => (
   <>
     <Helmet>
