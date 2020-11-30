@@ -5,22 +5,27 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 // A component for SEO, provided by Gatsby. Modified to include social images.
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const data = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
             author
+            description
+            title
+            url
           }
+        }
+        file(relativePath: { eq: "metacard.png" }) {
+          publicURL
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || data.site.siteMetadata.description
+  const defaultTitle = data.site.siteMetadata?.title
+  const socialCard = `${data.site.siteMetadata.url}${data.file.publicURL}`
 
   return (
     <Helmet
@@ -49,12 +54,16 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: socialCard,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: data.site.siteMetadata?.author || ``,
         },
         {
           name: `twitter:title`,
@@ -63,6 +72,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: socialCard,
         },
       ].concat(meta)}
     />
