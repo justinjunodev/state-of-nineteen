@@ -38,8 +38,8 @@ const Footer = () => (
         An open-source project by{' '}
         <Link
           isExternal
-          to="https://justinjuno.dev"
-          label="Visit Justin Juno's personal website"
+          to="https://twitter.com/justinjunodev"
+          label="Check out Justin Juno on Twitter"
         >
           @JustinJunoDev
         </Link>
