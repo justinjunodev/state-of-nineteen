@@ -4,6 +4,7 @@ import useCovidCountryData from '../../hooks/useCovidCountryData'
 import Link from '../Link'
 import Error from '../Error'
 import Loading from '../Loading'
+import Virus from '../Virus'
 
 // A component for fetching and displaying current country (US) data.
 const Country = () => {
@@ -23,6 +24,12 @@ const Country = () => {
 
   return (
     <S.CountryBackground>
+      <S.CountryVirusLeft>
+        <Virus />
+      </S.CountryVirusLeft>
+      <S.CountryVirusRight>
+        <Virus />
+      </S.CountryVirusRight>
       <S.CountryContent>
         <S.CountryHeading>In the United States</S.CountryHeading>
         <S.CountryText>
