@@ -8,7 +8,6 @@ export const StatesContent = styled.div`
 
 export const StatesHeading = styled.h3`
   margin-bottom: var(--scale-5);
-  color: var(--white);
   ${queries[1]} {
     margin-bottom: var(--scale-6);
   }

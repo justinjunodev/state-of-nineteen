@@ -25,12 +25,10 @@ export const GlobalStyles = createGlobalStyle`
         --scale-3: 1rem;
         --scale-2: .707rem;
         --scale-1: 0.5rem; 
-        --red: #E73B3B;
-        --gold: #EBB55F;
-        --navy: #120F37;
-        --royal: #1A1950;
-        --silver: #E6E6EB;
-        --white: #FCFCFF;
+        --red: #d72047;
+        --yellow: #f2b64c;
+        --cream: #fff8ed;
+        --black: #333333;
         --shadow: 0 .707rem 1rem .5rem rgba(0,0,0,0.1);
     }
     * {
@@ -45,7 +43,8 @@ export const GlobalStyles = createGlobalStyle`
         font-size: var(--scale-3);
         font-weight: 400;
         line-height: var(--scale-5);
-        background: var(--navy);
+        color: var(--black);
+        background: var(--yellow);
     }
     h1, h2, h3, h4 {
         font-family: var(--poppins);

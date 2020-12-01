@@ -23,8 +23,6 @@ const Country = () => {
 
   return (
     <S.CountryBackground>
-      <S.StripesLeft />
-      <S.StripesRight />
       <S.CountryContent>
         <S.CountryHeading>In the United States</S.CountryHeading>
         <S.CountryText>
@@ -40,7 +38,7 @@ const Country = () => {
             to="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
             label="Visit Centers for Disease Control website"
           >
-            CDC (Centers for Disease Control)
+            CDC
           </Link>
           ,{' '}
           <Link
@@ -48,7 +46,7 @@ const Country = () => {
             to="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
             label="Visit World Health Organization website"
           >
-            WHO (World Health Organization)
+            WHO
           </Link>
           , and local officials. This data is sourced from{' '}
           <Link
@@ -56,7 +54,7 @@ const Country = () => {
             to="https://covidtracking.com/data"
             label="Visit Covid Tracking Project website"
           >
-            The Atlantic's Covid Tracking Project
+            The Atlantic
           </Link>{' '}
           and is trusted by Johns Hopkins, The Whitehouse, and many more.
         </S.CountryText>

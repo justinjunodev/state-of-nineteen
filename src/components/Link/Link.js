@@ -1,17 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link as GatsbyLink } from 'gatsby'
+import * as S from './styles'
 
 // A link component for streamlining external and internal links.
 const Link = ({ to, children, label, isExternal }) =>
   isExternal ? (
-    <a href={to} target="_blank" rel="noreferrer" aria-label={label}>
+    <S.ExternalLink
+      href={to}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={label}
+    >
       <span>{children}</span>
-    </a>
+    </S.ExternalLink>
   ) : (
-    <GatsbyLink to={to}>
+    <S.GatsbyLink to={to}>
       <span>{children}</span>
-    </GatsbyLink>
+    </S.GatsbyLink>
   )
 
 Link.propTypes = {

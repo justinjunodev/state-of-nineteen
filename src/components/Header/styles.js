@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { wrapper } from '../../styles/global'
 
 export const HeaderBackground = styled.header`
-  background: var(--white);
+  background: var(--cream);
   padding: var(--scale-8) 0;
-  border-top: var(--scale-1) solid var(--gold);
+  border-top: var(--scale-1) solid var(--black);
 `
 
 export const HeaderContent = styled.div`
@@ -15,10 +15,9 @@ export const HeaderContent = styled.div`
 
 export const HeaderTitle = styled.h1`
   margin-bottom: var(--scale-2);
-  color: var(--royal);
 `
 
 export const HeaderSubtitle = styled.p`
-  color: var(--gold);
+  color: var(--red);
   font-weight: 700;
 `
